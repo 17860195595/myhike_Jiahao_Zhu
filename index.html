@@ -1,51 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <title>My BCIT Project</title>
-    <meta name="comp1800 template" content="My 1800 App">
+    <meta name="comp1800 template" content="My 1800 App" />
 
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Web Components for shared navbar and footer layout -->
-    <!-- <script type="module" src="/src/components/site-navbar.js"></script>
-    <script type="module" src="/src/components/site-footer.js"></script> -->
-</head>
+    <script type="module" src="/src/components/site-navbar.js"></script>
+    <script type="module" src="/src/components/site-footer.js"></script>
+  </head>
 
-<body>
+  <body>
     <!------------------------------>
     <!-- Your HTML Layout go here -->
     <!------------------------------>
 
     <!-- our own navbar goes here -->
-
+    <site-navbar></site-navbar>
+    <!-- Dismissible logged-in alert (hidden by default) -->
+    <div class="container mt-3">
+      <div
+        id="pageLoggedAlert"
+        class="alert alert-success alert-dismissible fade d-none"
+        role="alert"
+      >
+        <div id="pageLoggedText">
+          You are logged in to AnyWhereHikess Hiking App
+        </div>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="alert"
+          aria-label="Close"
+        ></button>
+      </div>
+    </div>
     <!-- Main content goes here -->
     <!-- This is the welcome on the landing page, with a login/signup button -->
     <div class="container">
-        <div class=" px-4 py-5 my-5 text-center">
-            <img class="d-block mx-auto mb-4" src="/images/image.jpg" alt="" width="72" height="57">
-            <h1 class="display-5 fw-bold">Welcome to ElmoHikes, <span id="name-goes-here">my friend!</span></h1>
-            <div class="col-lg-6 mx-auto">
-                <p class="lead mb-4">Join a community of hikers looking for new places to explore.</p>
-                <h2>The view is better, together.</h2>
-                <div class="d-grid justify-content-sm-center">
-                    <!-- Make this button clickable, using onclick event listener -->
-                    <button onclick="window.location.href='login.html'" type="button"
-                        class="btn btn-info btn-lg">Login/Signup</button>
-                </div>
-            </div>
+      <div class="px-4 py-5 my-5 text-center">
+        <img
+          class="d-block mx-auto mb-4"
+          src="/public/images/logo.svg"
+          alt="MyHike logo"
+          width="96"
+          height="72"
+        />
+        <h1 class="display-5 fw-bold">
+          Welcome to AnyWhereHikes,
+          <div id="name-goes-here">my friend!</div>
+        </h1>
+        <div class="col-lg-6 mx-auto">
+          <p class="lead mb-4">
+            Join a community of hikers looking for new places to explore.
+          </p>
+          <!-- Logged-in message (hidden by default) -->
+          <div
+            id="loggedMessage"
+            class="alert alert-success d-none"
+            role="status"
+          >
+            You are logged in to AnyWhereHikess Hiking App
+          </div>
+          <h2>The view is better, together.</h2>
+          <div class="d-grid justify-content-sm-center">
+            <!-- Make this button clickable, using onclick event listener -->
+            <button
+              onclick="window.location.href='./login.html'"
+              type="button"
+              class="btn btn-info btn-lg"
+            >
+              Login/Signup
+            </button>
+          </div>
         </div>
+      </div>
     </div>
 
     <!-- our own footer goes here -->
-
+    <site-footer></site-footer>
     <!---------------------------------------------->
     <!-- Your own JavaScript scripts go here      -->
     <!---------------------------------------------->
     <script type="module" src="/src/app.js"></script>
-
-</body>
-
+  </body>
 </html>

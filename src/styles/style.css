@@ -1,1 +1,88 @@
+/* Custom theme utilities */
+.bg-deep-blue {
+  background-color: #0b3d91 !important; /* deep blue */
+}
 
+.navbar .nav-link.text-white,
+.navbar .navbar-brand .text-white {
+  color: #fff !important;
+}
+
+/* Light brown navbar background */
+.bg-light-brown {
+  background-color: #d7c4a7 !important; /* light brown */
+}
+
+/* Dark brown button for contrast on light brown background */
+.btn-dark-brown {
+  background-color: #6b4f3d;
+  color: #fff;
+  border-color: #6b4f3d;
+}
+
+.btn-dark-brown:hover,
+.btn-dark-brown:focus {
+  background-color: #563e31;
+  border-color: #563e31;
+  color: #fff;
+}
+
+/* Ensure navbar brand text is dark on light brown */
+.bg-light-brown .navbar-brand .text-white {
+  color: #3b2b20 !important;
+}
+
+/* Global buttons: make primary appearance deep brown */
+.btn-custom-brown,
+.btn,
+.btn-primary {
+  background-color: #6b4f3d;
+  color: #fff;
+  border-color: #6b4f3d;
+}
+
+.btn:hover,
+.btn:focus,
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #563e31;
+  border-color: #563e31;
+  color: #fff;
+}
+
+.btn:active,
+.btn-primary:active {
+  background-color: #442f27;
+  border-color: #442f27;
+}
+
+/* Keep outline buttons readable when used */
+.btn-outline-light {
+  color: #6b4f3d;
+  border-color: #6b4f3d;
+  background-color: transparent;
+}
+
+.btn-outline-light:hover,
+.btn-outline-light:focus {
+  color: #fff;
+  background-color: #6b4f3d;
+  border-color: #6b4f3d;
+}
+
+/* Make the navbar toggler use dark brown button style on light-brown navbar */
+.bg-light-brown .navbar-toggler.btn-dark-brown {
+  background-color: #6b4f3d;
+  border-color: #6b4f3d;
+}
+
+.bg-light-brown .navbar-toggler.btn-dark-brown:hover,
+.bg-light-brown .navbar-toggler.btn-dark-brown:focus {
+  background-color: #563e31;
+  border-color: #563e31;
+}
+
+/* Ensure toggler icon is white for visibility */
+.bg-light-brown .navbar-toggler .navbar-toggler-icon {
+  filter: invert(1) brightness(2);
+}
