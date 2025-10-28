@@ -19,9 +19,20 @@
     <site-navbar></site-navbar>
     <!-- Dismissible logged-in alert for main.html -->
     <div class="container mt-3">
-      <div id="mainPageLoggedAlert" class="alert alert-success alert-dismissible fade d-none" role="alert">
-        <div id="mainPageLoggedText">You are logged in to AnyWhereHikess Hiking App</div>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      <div
+        id="mainPageLoggedAlert"
+        class="alert alert-success alert-dismissible fade d-none"
+        role="alert"
+      >
+        <div id="mainPageLoggedText">
+          You are logged in to AnyWhereHikess Hiking App
+        </div>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="alert"
+          aria-label="Close"
+        ></button>
       </div>
     </div>
     <!-- Your HTML Layout go here -->
@@ -35,6 +46,10 @@
       <section class="row align-items-center mb-5">
         <div class="col-md-7">
           <h1 class="display-4 fw-bold text-center">Welcome to MyHike</h1>
+
+          <p class="text-center">
+            Quote of the day:<span id="quote-goes-here"></span>
+          </p>
           <!-- <p class="lead text-muted">
             Discover trails, track your progress, and share your adventures with
             friends.
@@ -46,13 +61,13 @@
             <a href="#new" class="btn btn-outline-secondary btn-lg"
               >Create Hike</a
             > -->
-          </div>
         </div>
-        <div class="col-md-5 text-center d-none d-md-block">
+        <div class="col-md-5 text-center d-none d-md-block" style="border-radius: 20%; overflow: hidden;">
           <img
-            src="/public/images/image.jpg"
+            src="/public/images/logo.svg"
             alt="Trail"
             class="img-fluid rounded shadow"
+            style="display: block; width: 100%; height: auto;"
           />
         </div>
       </section>
@@ -66,6 +81,25 @@
           </p>
         </div>
       </section>
+      <div class="container-fluid bg-light text-dark p-5">
+        <h1>Popular Hikes</h1>
+        <div id="hikes-go-here" class="row"></div>
+      </div>
+
+      <template id="hikeCardTemplate">
+        <div class="col">
+          <div class="card">
+            <img class="card-img-top card-image" src="..." alt="Hike Image" />
+            <div class="card-body">
+              <h5 class="card-title"></h5>
+              <p class="card-text"></p>
+              <p>Length: <span class="card-length"></span> km</p>
+              <a class="btn btn-primary read-more" href="#">Read More</a>
+              <!-- <button class="btn btn-primary">Get details</button> -->
+            </div>
+          </div>
+        </div>
+      </template>
 
       <!-- Features -->
       <!-- <section id="trails" class="mb-5">
@@ -179,5 +213,6 @@
     <!---------------------------------------------->
 
     <script type="module" src="/src/app.js"></script>
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>
